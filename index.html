@@ -2,46 +2,116 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Waweru's Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-<header>
-    <h1>Waweru's Portfolio</h1>
-    <nav>
-        <ul>
-            <li><a href="#about">About Me</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-</header>
-<main>
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Hello! I'm Waweru, a passionate software developer with experience in web development. I enjoy creating innovative solutions to complex problems and am always eager to learn new technologies.</p>
-    </section>
+    <header>
+        <nav>
+            <h1>Waweru</h1>
 
-    <section id="projects">
-        <h2>Projects</h2>
-        <ul>
-            <li><strong>Project A:</strong> A personal website built with HTML, CSS, and JavaScript.</li>
-            <li><strong>Project B:</strong> A simple e-commerce website.</li>
-            <li><strong>Project C:</strong> A weather forecasting application.</li>
-        </ul>
-    </section>
+            <button id="menu-button">Menu</button>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>You can reach me at</p>
-</main>
-<aside>
-    <h2>Quick links</h2>
-    <p>Follow me on GitHub!</p>
-</aside>
-<footer>
-    <p>&copy; 2026 Waweru's Portfolio. All rights reserved.</p>
+            <ul id="menu-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <section class="hero">
+            <div>
+                <p class="small-heading">Web Development Student</p>
+                <h2>Hello, I'm Waweru</h2>
+                <p>
+                    I am learning HTML, CSS, and JavaScript. This portfolio shows
+                    what I am building as I grow my web development skills.
+                </p>
+                <a href="#projects" class="button">View My Work</a>
+            </div>
+        </section>
+    </header>
+
+    <main>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>
+                I am a beginner web developer from Kenya. I started by learning
+                HTML and CSS, and I am now in my first week of JavaScript.
+            </p>
+            <p>
+                I enjoy learning how websites are made and practicing by building
+                simple projects from scratch.
+            </p>
+        </section>
+
+        <section id="skills">
+            <h2>My Skills</h2>
+            <div class="cards">
+                <div class="card">
+                    <h3>HTML</h3>
+                    <p>I can create the structure of a web page using headings, paragraphs, links, and sections.</p>
+                </div>
+
+                <div class="card">
+                    <h3>CSS</h3>
+                    <p>I can style pages using colors, spacing, borders, and simple layouts.</p>
+                </div>
+
+                <div class="card">
+                    <h3>JavaScript</h3>
+                    <p>I am learning how to make websites interactive using buttons and events.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="cards">
+                <div class="card">
+                    <h3>Personal Portfolio</h3>
+                    <p>This website is my first portfolio project using HTML, CSS, and a little JavaScript.</p>
+                </div>
+
+                <div class="card">
+                    <h3>Practice Pages</h3>
+                    <p>Small pages I build while learning from W3Schools and other beginner lessons.</p>
+                </div>
+
+                <div class="card">
+                    <h3>Coming Soon</h3>
+                    <p>I will add more projects here as I continue learning and practicing.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <p>You can find my work on GitHub.</p>
+            <p>
+                <a href="https://github.com/kgwaweruwagiteta-ux" target="_blank">Visit my GitHub profile</a>
+            </p>
+
+            <form id="contact-form">
+                <label for="name">Name</label>
+                <input type="text" id="name" placeholder="Enter your name">
+
+                <label for="message">Message</label>
+                <textarea id="message" rows="4" placeholder="Write your message"></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+
+            <p id="form-message"></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Waweru. Built with HTML, CSS, and JavaScript.</p>
     </footer>
-    </body>
-    </html>
+
+    <script src="script.js"></script>
+</body>
+</html>
