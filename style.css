@@ -1,101 +1,196 @@
-/* Reset some defaults */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.6;
-  background: #f4f4f9;
-  color: #333;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #222;
+    background-color: #f5f7fa;
 }
 
-/* Header */
 header {
-  background: linear-gradient(135deg, #0066cc, #0099ff);
-  color: #fff;
-  padding: 20px;
-  text-align: center;
+    background-color: #0b7285;
+    color: white;
 }
 
-header h1 {
-  margin-bottom: 10px;
+nav {
+    max-width: 1000px;
+    margin: auto;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav h1 {
+    margin: 0;
 }
 
 nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
 }
 
 nav a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s ease;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 nav a:hover {
-  color: #ffdd57;
+    text-decoration: underline;
 }
 
-/* Main sections */
+#menu-button {
+    display: none;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    background-color: white;
+    color: #0b7285;
+    font-weight: bold;
+}
+
+.hero {
+    max-width: 1000px;
+    margin: auto;
+    padding: 80px 20px;
+}
+
+.hero h2 {
+    font-size: 42px;
+    margin: 10px 0;
+}
+
+.hero p {
+    max-width: 600px;
+}
+
+.small-heading {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 14px;
+}
+
+.button,
+button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 4px;
+    background-color: #f08c00;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
 main {
-  max-width: 1000px;
-  margin: 30px auto;
-  padding: 0 20px;
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 30px;
+    max-width: 1000px;
+    margin: auto;
+    padding: 30px 20px;
 }
 
 section {
-  background: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  margin-bottom: 20px;
+    margin-bottom: 35px;
+    padding: 25px;
+    background-color: white;
+    border-radius: 8px;
 }
 
 section h2 {
-  margin-bottom: 15px;
-  color: #0066cc;
+    margin-top: 0;
+    color: #0b7285;
 }
 
-/* Projects list */
-#projects ul {
-  list-style: none;
+.cards {
+    display: flex;
+    gap: 20px;
 }
 
-#projects li {
-  margin-bottom: 10px;
-  padding: 10px;
-  background: #f9f9ff;
-  border-left: 4px solid #0066cc;
-  border-radius: 4px;
+.card {
+    flex: 1;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #ffffff;
 }
 
-/* Aside */
-aside {
-  background: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+.card h3 {
+    margin-top: 0;
+    color: #0b7285;
 }
 
-aside h2 {
-  margin-bottom: 10px;
-  color: #0099ff;
+form {
+    max-width: 500px;
+    margin-top: 20px;
 }
 
-/* Footer */
+label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#form-message {
+    font-weight: bold;
+    color: #0b7285;
+}
+
 footer {
-  background: #0066cc;
-  color: #fff;
-  text-align: center;
-  padding: 15px;
-  margin-top: 30px;
+    padding: 20px;
+    text-align: center;
+    background-color: #222;
+    color: white;
+}
+
+@media screen and (max-width: 700px) {
+    nav {
+        display: block;
+    }
+
+    #menu-button {
+        display: block;
+        margin-top: 10px;
+    }
+
+    #menu-links {
+        display: none;
+        margin-top: 15px;
+    }
+
+    #menu-links.show {
+        display: block;
+    }
+
+    #menu-links li {
+        margin-bottom: 10px;
+    }
+
+    .hero h2 {
+        font-size: 32px;
+    }
+
+    .cards {
+        display: block;
+    }
+
+    .card {
+        margin-bottom: 15px;
+    }
 }
